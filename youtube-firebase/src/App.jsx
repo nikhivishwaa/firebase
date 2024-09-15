@@ -4,11 +4,11 @@ import app from "./config/firebase";
 import "./App.css";
 
 // create database instance
-db = getDatabase(app);
+const db = getDatabase(app);
 
 function App() {
   const addentry = () => {
-    set(ref(app, "users/nikhivishwa"), {
+    set(ref(db, "users/nikhivishwa"), {
       id: 1,
       name: "nikhil vishwakarma",
       email: "nikhil@gmail.com",
